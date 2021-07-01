@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 60%;
 }
 
 body {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
-  height: 900px;
+  height: 110vh;
   background-image: linear-gradient(to top left, #753682 50%, #bf2e34 100%);
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@ main {
 }
 
 .player__0 {
-  padding: 65px;
+  padding: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@ main {
 }
 
 .player__1 {
-  padding: 45px;
+  padding: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,11 +128,11 @@ main {
 }
 
 .btn__new {
-  top: 39.3rem;
-  left:55rem
+  top: 37rem;
+  left: 58rem;
 }
 .btn__roll {
-  top: 39.3rem;
+  top: 37rem;
   left: 15rem;
 }
 
@@ -155,8 +155,8 @@ main {
 
 .dice {
   position: absolute;
-  top: 36.2rem;
-  left: 35rem;
+  top: 35rem;
+  left: 37rem;
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
