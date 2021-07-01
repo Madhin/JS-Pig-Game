@@ -9,13 +9,15 @@ var btnHold1 = document.querySelector(".btn__hold1");
 var btnHold2 = document.querySelector(".btn__hold2");
 var current0 = document.querySelector("#current__0");
 var current1 = document.querySelector("#current__1");
-score0.textContent = 0;
-score1.textContent = 0;
+var scores = [0, 0];
+score0.innerHTML = 0;
+score1.innerHTML = 0;
 dice.classList.add("hidden");
-var currentScore = 0; //roll dice function
+var currentScore = 0;
+var activePlayer = 0; //roll dice function
 
 btnRoll.addEventListener("click", function () {
-  var generateRoll = Math.trunc(Math.random() * 6) + 1;
+  var generateRoll = Math.floor(Math.random() * 6) + 1;
   console.log(generateRoll);
   dice.classList.remove("hidden");
   dice.src = "dice-".concat(generateRoll, ".png");
@@ -23,5 +25,5 @@ btnRoll.addEventListener("click", function () {
   if (generateRoll !== 1) {
     currentScore += generateRoll;
     current0.textContent = currentScore;
-  }
+  } else {}
 });

@@ -7,21 +7,23 @@ const btnHold1 = document.querySelector(".btn__hold1");
 const btnHold2 = document.querySelector(".btn__hold2");
 const current0 = document.querySelector("#current__0");
 const current1 = document.querySelector("#current__1");
-
-score0.textContent = 0;
-score1.textContent = 0;
+const scores = [0, 0];
+score0.innerHTML = 0;
+score1.innerHTML = 0;
 dice.classList.add("hidden");
 
 let currentScore = 0;
+let activePlayer = 0;
 
 //roll dice function
 btnRoll.addEventListener("click", () => {
-  const generateRoll = Math.trunc(Math.random() * 6) + 1;
+  const generateRoll = Math.floor(Math.random() * 6) + 1;
   console.log(generateRoll);
   dice.classList.remove("hidden");
   dice.src = `dice-${generateRoll}.png`;
   if (generateRoll !== 1) {
     currentScore += generateRoll;
     current0.textContent = currentScore;
+  } else {
   }
 });
