@@ -21,6 +21,7 @@ main {
   display: flex;
   flex-direction: column;
   border: 2px solid black;
+  background-color: cadetblue;
 }
 
 .player__0 {
@@ -118,25 +119,18 @@ main {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
-.btn::first-letter {
-  font-size: 2.4rem;
-  display: inline-block;
-  margin-right: 0.7rem;
-}
-
 .btn__new {
   top: 37rem;
-  left: 58rem;
+  left: 70rem;
 }
 
 .btn__roll {
   top: 37rem;
-  left: 15rem;
+  left: 12rem;
 }
 
 .btn__hold1 {
   top: 1rem;
-  left: 37rem;
 }
 
 .btn__hold2 {
@@ -148,15 +142,10 @@ main {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
-.btn:focus {
-  outline: none;
-}
-
 .dice {
   position: absolute;
-  top: 35rem;
+  top: 36rem;
   left: 36.5rem;
-  transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
