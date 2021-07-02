@@ -36,22 +36,38 @@ btnRoll.addEventListener("click", function () {
   }
 });
 btnHold1.addEventListener("click", function () {
-  scores[0] += currentScore;
-  score0.textContent = scores[0];
-  console.log(scores[0]);
-  activePlayer = 1;
-  currentScore = 0;
-  current0.textContent = currentScore;
-  player2.classList.add("player__active");
-  player1.classList.remove("player__active");
+  if (scores[0] >= 100) {
+    player1.classList.add("player__winner");
+  } else {
+    scores[0] += currentScore;
+    score0.textContent = scores[0];
+    console.log(scores[0]);
+    activePlayer = 1;
+    currentScore = 0;
+    current0.textContent = currentScore;
+    player2.classList.add("player__active");
+    player1.classList.remove("player__active");
+  }
 });
 btnHold2.addEventListener("click", function () {
-  scores[1] += currentScore;
-  score1.textContent = scores[1];
-  console.log(scores[1]);
-  activePlayer = 0;
-  currentScore = 0;
-  current1.textContent = currentScore;
-  player1.classList.add("player__active");
-  player2.classList.remove("player__active");
+  if (scores[1] >= 100) {
+    player2.classList.add("player__winner");
+  } else {
+    scores[1] += currentScore;
+    score1.textContent = scores[1];
+    console.log(scores[1]);
+    activePlayer = 0;
+    currentScore = 0;
+    current1.textContent = currentScore;
+    player1.classList.add("player__active");
+    player2.classList.remove("player__active");
+  }
 });
+
+if (scores[0] >= 100) {
+  player1.classList.add("player__winner");
+}
+
+if (scores[1] >= 100) {
+  player2.classList.add("player__winner");
+}
