@@ -7,6 +7,8 @@ const btnHold1 = document.querySelector(".btn__hold1");
 const btnHold2 = document.querySelector(".btn__hold2");
 const current0 = document.querySelector("#current__0");
 const current1 = document.querySelector("#current__1");
+const player1 = document.querySelector(".player__0");
+const player2 = document.querySelector(".player__1");
 const scores = [0, 0];
 score0.innerHTML = 0;
 score1.innerHTML = 0;
@@ -29,5 +31,7 @@ btnRoll.addEventListener("click", () => {
     document.getElementById(`current__${activePlayer}`).textContent = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
     currentScore = 0;
+    player1.classList.toggle("player__active");
+    player2.classList.toggle("player__active");
   }
 });
