@@ -35,3 +35,11 @@ btnRoll.addEventListener("click", function () {
     player2.classList.toggle("player__active");
   }
 });
+btnHold1.addEventListener("click", function () {
+  scores[0] = current0.textContent;
+  console.log(scores[0]);
+  activePlayer = 1;
+  currentScore = 0;
+  player2.classList.add("player__active");
+  player1.classList.remove("player__active");
+});
