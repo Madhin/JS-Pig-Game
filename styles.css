@@ -35,7 +35,7 @@ main {
 .player__1 {
   padding: 70px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   transition: all 0.75s;
 }
@@ -98,7 +98,10 @@ main {
   font-size: 3.5rem;
 }
 
-/*POSITIONED ELEMENTS */
+#current__1 {
+  margin-bottom: 10px;
+}
+
 .btn {
   position: absolute;
   color: #444;
