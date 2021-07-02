@@ -1,3 +1,5 @@
+@import "piggy.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -160,4 +162,8 @@ main {
 
 .hidden {
   display: none;
+}
+
+.piggy {
+  position: absolute;
 }

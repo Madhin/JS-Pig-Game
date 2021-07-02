@@ -1,0 +1,125 @@
+.piggy {
+  transform: perspective(3000px);
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  background: #4992ad;
+}
+
+.piggy::before {
+  content: " ";
+  width: 98%;
+  height: 98%;
+  position: relative;
+  display: block;
+  left: 1%;
+  top: 1%;
+  border-radius: 200px;
+  transform: translateZ(20px);
+  box-shadow: 0 0 20px 0px #fff, 0 0 0 30px #cf331f, 0 0 20px 30px #fff,
+    0 0 0 60px #cf331f, 0 0 20px 60px #fff, 0 0 0 90px #cf331f,
+    0 0 20px 90px #fff, 0 0 0 120px #cf331f, 0 0 20px 120px #fff,
+    0 0 0 150px #cf331f;
+}
+
+.piggy::after {
+  content: " ";
+  position: absolute;
+  background: url("https://upload.wikimedia.org/wikipedia/en/thumb/8/88/Porky_Pig.svg/800px-Porky_Pig.svg.png")
+    no-repeat center/contain;
+
+  width: 80%;
+  height: 150%;
+  display: block;
+  left: 20%;
+  bottom: -12%;
+  transform: rotateX(-10deg);
+  transform-origin: center 120%;
+  
+  animation-name: zoom;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes zoom {
+  0% {
+    transform: rotateX(-10deg) scale(0.66);
+  }
+  40% {
+    transform: rotateX(-10deg) scale(1);
+  }
+
+  60% {
+    transform: rotateX(-10deg) scale(1);
+  }
+
+  100% {
+    transform: rotateX(-10deg) scale(0.66);
+  }
+}
+
+/* Support styling */
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+label {
+  color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  background: #122;
+  line-height: 2;
+  padding-left: 2rem;
+  padding-right: 10px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+input {
+  position: absolute;
+  top: 8px;
+  transform: translateX(-53px);
+}
+
+input:checked + div {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: perspective(3000px) rotateY(-90deg) rotateX(20deg);
+    background: #4992ad88;
+  }
+  40% {
+    transform: perspective(3000px);
+    background: #4992adff;
+  }
+
+  60% {
+    transform: perspective(3000px) rotateY(0deg) rotateX(0deg);
+    background: #4992adff;
+  }
+
+  100% {
+    transform: perspective(3000px) rotateY(90deg) rotateX(20deg);
+    background: #4992ad88;
+  }
+}
+
+input:checked + .piggy::after {
+  animation-name: initial;
+}

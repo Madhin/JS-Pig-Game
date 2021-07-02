@@ -10,9 +10,13 @@ const current1 = document.querySelector("#current__1");
 const player1 = document.querySelector(".player__0");
 const player2 = document.querySelector(".player__1");
 const scores = [0, 0];
+const btns = document.querySelectorAll(".btn");
+const piggy = document.querySelector(".piggy");
+
 score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add("hidden");
+piggy.classList.add("hidden");
 
 let currentScore = 0;
 let activePlayer = 0;
@@ -39,9 +43,11 @@ btnRoll.addEventListener("click", () => {
 btnHold1.addEventListener("click", () => {
   score0.textContent = currentScore;
   console.log(score0.textContent);
-  if (score0.textContent >= 100) {
+  if (score0.textContent >= 20) {
     player1.classList.add("player__winner");
     player2.classList.remove("player__active");
+    btnRoll.disabled = true;
+    piggy.classList.remove("hidden");
   } else {
     scores[0] += currentScore;
     activePlayer = 1;
@@ -55,9 +61,11 @@ btnHold1.addEventListener("click", () => {
 btnHold2.addEventListener("click", () => {
   score1.textContent = currentScore;
   console.log(score1.textContent);
-  if (score1.textContent >= 100) {
+  if (score1.textContent >= 20) {
     player2.classList.add("player__winner");
     player1.classList.remove("player__active");
+    btns.disabled = true;
+    piggy.classList.remove("hidden");
   } else {
     scores[1] += currentScore;
     activePlayer = 0;
