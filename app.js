@@ -10,8 +10,8 @@ const current1 = document.querySelector("#current__1");
 const player1 = document.querySelector(".player__0");
 const player2 = document.querySelector(".player__1");
 const scores = [0, 0];
-score0.innerHTML = 0;
-score1.innerHTML = 0;
+score0.textContent = 0;
+score1.textContent = 0;
 dice.classList.add("hidden");
 
 let currentScore = 0;
@@ -20,11 +20,11 @@ let activePlayer = 0;
 //roll dice function
 btnRoll.addEventListener("click", () => {
   const generateRoll = Math.floor(Math.random() * 6) + 1;
-  console.log(generateRoll);
   dice.classList.remove("hidden");
   dice.src = `dice-${generateRoll}.png`;
   if (generateRoll !== 1) {
     currentScore += generateRoll;
+    console.log(currentScore);
     document.getElementById(`current__${activePlayer}`).textContent =
       currentScore;
   } else {
@@ -37,13 +37,13 @@ btnRoll.addEventListener("click", () => {
 });
 
 btnHold1.addEventListener("click", () => {
-  if (scores[0] >= 20) {
+  score0.textContent = currentScore;
+  console.log(score0.textContent);
+  if (score0.textContent >= 20) {
     player1.classList.add("player__winner");
     player2.classList.remove("player__active");
   } else {
     scores[0] += currentScore;
-    score0.textContent = scores[0];
-    console.log(scores[0]);
     activePlayer = 1;
     currentScore = 0;
     current0.textContent = currentScore;
@@ -63,7 +63,7 @@ btnHold2.addEventListener("click", () => {
   player2.classList.remove("player__active");
 });
 
-console.log(typeof scores[1]);
+console.log(typeof scores[0]);
 
 if (scores[0] >= 20) {
   player1.classList.add("player__winner");
