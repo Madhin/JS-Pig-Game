@@ -98,8 +98,6 @@ main {
 /*POSITIONED ELEMENTS */
 .btn {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   color: #444;
   background: none;
   border: none;
@@ -111,7 +109,6 @@ main {
   transition: all 0.2s;
   background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
@@ -119,19 +116,21 @@ main {
 
 .btn__new {
   top: 37rem;
-  left: 70rem;
+  left: 61rem;
 }
 .btn__roll {
   top: 37rem;
-  left: 12rem;
+  left: 4rem;
 }
 
 .btn__hold1 {
   top: 1rem;
+  left:35.5rem
 }
 
 .btn__hold2 {
   bottom: 1rem;
+  left: 36rem;
 }
 
 .btn:active {
@@ -143,7 +142,7 @@ main {
 .dice {
   position: absolute;
   top: 36rem;
-  left: 36.5rem;
+  left: 36.6rem;
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
