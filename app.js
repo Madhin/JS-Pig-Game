@@ -23,7 +23,9 @@ btnRoll.addEventListener("click", () => {
   dice.src = `dice-${generateRoll}.png`;
   if (generateRoll !== 1) {
     currentScore += generateRoll;
-    current0.textContent = currentScore;
+    document.getElementById(`current__${activePlayer}`).textContent =
+      currentScore;
   } else {
+    activePlayer = activePlayer === 0 ? 1 : 0;
   }
 });

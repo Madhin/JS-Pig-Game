@@ -24,6 +24,8 @@ btnRoll.addEventListener("click", function () {
 
   if (generateRoll !== 1) {
     currentScore += generateRoll;
-    current0.textContent = currentScore;
-  } else {}
+    document.getElementById("current__".concat(activePlayer)).textContent = currentScore;
+  } else {
+    activePlayer = activePlayer === 0 ? 1 : 0;
+  }
 });

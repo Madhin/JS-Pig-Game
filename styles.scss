@@ -115,8 +115,8 @@ main {
 }
 
 .btn__new {
-  top: 37rem;
-  left: 61rem;
+  top: 355px;
+  left: 600px;
 }
 .btn__roll {
   top: 37rem;
@@ -125,19 +125,17 @@ main {
 
 .btn__hold1 {
   top: 1rem;
-  left:35.5rem
+  left: 36rem;
 }
 
 .btn__hold2 {
   bottom: 1rem;
-  left: 36rem;
+  left: 35rem;
 }
 
 .btn:active {
-  transform: translate(-50%, 3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
-
 
 .dice {
   position: absolute;
