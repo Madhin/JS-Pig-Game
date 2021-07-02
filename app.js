@@ -38,6 +38,7 @@ btnRoll.addEventListener("click", () => {
 
 btnHold1.addEventListener("click", () => {
   scores[0] = current0.textContent;
+  score0.textContent = scores[0];
   console.log(scores[0]);
   activePlayer = 1;
   currentScore = 0;
