@@ -1,7 +1,5 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 var score0 = document.querySelector("#score__0");
 var score1 = document.querySelector("#score__1");
 var dice = document.querySelector(".dice");
@@ -41,7 +39,7 @@ btnHold1.addEventListener("click", function () {
   score0.textContent = currentScore;
   console.log(score0.textContent);
 
-  if (score0.textContent >= 20) {
+  if (score0.textContent >= 100) {
     player1.classList.add("player__winner");
     player2.classList.remove("player__active");
   } else {
@@ -54,17 +52,18 @@ btnHold1.addEventListener("click", function () {
   }
 });
 btnHold2.addEventListener("click", function () {
-  scores[1] += currentScore;
-  score1.textContent = scores[1];
-  console.log(scores[1]);
-  activePlayer = 0;
-  currentScore = 0;
-  current1.textContent = currentScore;
-  player1.classList.add("player__active");
-  player2.classList.remove("player__active");
-});
-console.log(_typeof(scores[0]));
+  score1.textContent = currentScore;
+  console.log(score1.textContent);
 
-if (scores[0] >= 20) {
-  player1.classList.add("player__winner");
-}
+  if (score1.textContent >= 100) {
+    player2.classList.add("player__winner");
+    player1.classList.remove("player__active");
+  } else {
+    scores[1] += currentScore;
+    activePlayer = 0;
+    currentScore = 0;
+    current1.textContent = currentScore;
+    player1.classList.add("player__active");
+    player2.classList.remove("player__active");
+  }
+});

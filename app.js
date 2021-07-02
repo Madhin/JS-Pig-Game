@@ -39,7 +39,7 @@ btnRoll.addEventListener("click", () => {
 btnHold1.addEventListener("click", () => {
   score0.textContent = currentScore;
   console.log(score0.textContent);
-  if (score0.textContent >= 20) {
+  if (score0.textContent >= 100) {
     player1.classList.add("player__winner");
     player2.classList.remove("player__active");
   } else {
@@ -53,18 +53,17 @@ btnHold1.addEventListener("click", () => {
 });
 
 btnHold2.addEventListener("click", () => {
-  scores[1] += currentScore;
-  score1.textContent = scores[1];
-  console.log(scores[1]);
-  activePlayer = 0;
-  currentScore = 0;
-  current1.textContent = currentScore;
-  player1.classList.add("player__active");
-  player2.classList.remove("player__active");
+  score1.textContent = currentScore;
+  console.log(score1.textContent);
+  if (score1.textContent >= 100) {
+    player2.classList.add("player__winner");
+    player1.classList.remove("player__active");
+  } else {
+    scores[1] += currentScore;
+    activePlayer = 0;
+    currentScore = 0;
+    current1.textContent = currentScore;
+    player1.classList.add("player__active");
+    player2.classList.remove("player__active");
+  }
 });
-
-console.log(typeof scores[0]);
-
-if (scores[0] >= 20) {
-  player1.classList.add("player__winner");
-}
