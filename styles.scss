@@ -125,6 +125,13 @@ main {
   top: 355px;
   left: 600px;
 }
+
+.btn__new2 {
+  top: 750px;
+  font-size: 33px;
+  backdrop-filter: blur(30px);
+}
+
 .btn__roll {
   top: 37rem;
   left: 4rem;
@@ -167,15 +174,29 @@ main {
 
 .piggy {
   position: absolute;
+  top: 330px;
   width: 150px;
   height: 150px;
+  backdrop-filter: blur(90px);
 }
 
 .piggy__h1 {
   position: absolute;
-  top: 620px;
-  font-size: 100px;
+  top: 628px;
+  font-size: 90px;
   font-family: Acme, sans-serif;
   color: white;
+  display: none;
+  backdrop-filter: blur(10px);
+}
+
+.piggy__winner1,
+.piggy__winner2 {
+  position: absolute;
+  top: 65px;
+  font-size: 90px;
+  font-family: Acme, sans-serif;
+  color: white;
+  backdrop-filter: blur(10px);
   display: none;
 }

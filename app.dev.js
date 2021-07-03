@@ -4,6 +4,7 @@ var score0 = document.querySelector("#score__0");
 var score1 = document.querySelector("#score__1");
 var dice = document.querySelector(".dice");
 var btnNew = document.querySelector(".btn__new");
+var btnNew2 = document.querySelector(".btn__new2");
 var btnRoll = document.querySelector(".btn__roll");
 var btnHold1 = document.querySelector(".btn__hold1");
 var btnHold2 = document.querySelector(".btn__hold2");
@@ -15,10 +16,13 @@ var scores = [0, 0];
 var btns = document.querySelectorAll(".btn");
 var piggy = document.querySelector(".piggy");
 var piggy__h1 = document.querySelector(".piggy__h1");
+var piggy__winner1 = document.querySelector(".piggy__winner1");
+var piggy__winner2 = document.querySelector(".piggy__winner2");
 score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add("hidden");
 piggy.classList.add("hidden");
+btnNew2.classList.add("hidden");
 var currentScore = 0;
 var activePlayer = 0; //roll dice function
 
@@ -45,10 +49,13 @@ btnHold1.addEventListener("click", function () {
 
   if (score0.textContent >= 20) {
     player1.classList.add("player__winner");
+    player2.classList.add("player__winner");
     player2.classList.remove("player__active");
     btnRoll.disabled = true;
     piggy.classList.remove("hidden");
     piggy__h1.style.display = "block";
+    piggy__winner1.style.display = "block";
+    btnNew2.classList.remove("hidden");
   } else {
     scores[0] += currentScore;
     activePlayer = 1;
@@ -63,11 +70,14 @@ btnHold2.addEventListener("click", function () {
   console.log(score1.textContent);
 
   if (score1.textContent >= 20) {
+    player1.classList.add("player__winner");
     player2.classList.add("player__winner");
     player1.classList.remove("player__active");
     btns.disabled = true;
     piggy.classList.remove("hidden");
     piggy__h1.style.display = "block";
+    btnNew2.classList.remove("hidden");
+    piggy__winner2.style.display = "block";
   } else {
     scores[1] += currentScore;
     activePlayer = 0;

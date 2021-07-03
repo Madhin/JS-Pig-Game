@@ -2,6 +2,7 @@ const score0 = document.querySelector("#score__0");
 const score1 = document.querySelector("#score__1");
 const dice = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn__new");
+const btnNew2 = document.querySelector(".btn__new2");
 const btnRoll = document.querySelector(".btn__roll");
 const btnHold1 = document.querySelector(".btn__hold1");
 const btnHold2 = document.querySelector(".btn__hold2");
@@ -13,11 +14,14 @@ const scores = [0, 0];
 const btns = document.querySelectorAll(".btn");
 const piggy = document.querySelector(".piggy");
 const piggy__h1 = document.querySelector(".piggy__h1");
+const piggy__winner1 = document.querySelector(".piggy__winner1");
+const piggy__winner2 = document.querySelector(".piggy__winner2");
 
 score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add("hidden");
 piggy.classList.add("hidden");
+btnNew2.classList.add("hidden");
 
 let currentScore = 0;
 let activePlayer = 0;
@@ -46,10 +50,13 @@ btnHold1.addEventListener("click", () => {
   console.log(score0.textContent);
   if (score0.textContent >= 20) {
     player1.classList.add("player__winner");
+    player2.classList.add("player__winner");
     player2.classList.remove("player__active");
     btnRoll.disabled = true;
     piggy.classList.remove("hidden");
     piggy__h1.style.display = "block";
+    piggy__winner1.style.display = "block";
+    btnNew2.classList.remove("hidden");
   } else {
     scores[0] += currentScore;
     activePlayer = 1;
@@ -64,11 +71,14 @@ btnHold2.addEventListener("click", () => {
   score1.textContent = currentScore;
   console.log(score1.textContent);
   if (score1.textContent >= 20) {
+    player1.classList.add("player__winner");
     player2.classList.add("player__winner");
     player1.classList.remove("player__active");
     btns.disabled = true;
     piggy.classList.remove("hidden");
     piggy__h1.style.display = "block";
+    btnNew2.classList.remove("hidden");
+    piggy__winner2.style.display = "block";
   } else {
     scores[1] += currentScore;
     activePlayer = 0;
