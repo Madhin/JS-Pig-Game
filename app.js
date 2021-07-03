@@ -12,6 +12,7 @@ const player2 = document.querySelector(".player__1");
 const scores = [0, 0];
 const btns = document.querySelectorAll(".btn");
 const piggy = document.querySelector(".piggy");
+const piggy__h1 = document.querySelector(".piggy__h1");
 
 score0.textContent = 0;
 score1.textContent = 0;
@@ -48,6 +49,7 @@ btnHold1.addEventListener("click", () => {
     player2.classList.remove("player__active");
     btnRoll.disabled = true;
     piggy.classList.remove("hidden");
+    piggy__h1.style.display = "block";
   } else {
     scores[0] += currentScore;
     activePlayer = 1;
@@ -66,6 +68,7 @@ btnHold2.addEventListener("click", () => {
     player1.classList.remove("player__active");
     btns.disabled = true;
     piggy.classList.remove("hidden");
+    piggy__h1.style.display = "block";
   } else {
     scores[1] += currentScore;
     activePlayer = 0;

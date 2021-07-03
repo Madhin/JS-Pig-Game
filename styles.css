@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 .piggy {
   transform: perspective(3000px);
   position: relative;
@@ -280,4 +281,15 @@ main {
 
 .piggy {
   position: absolute;
+  width: 150px;
+  height: 150px;
+}
+
+.piggy__h1 {
+  position: absolute;
+  top: 620px;
+  font-size: 100px;
+  font-family: Acme, sans-serif;
+  color: white;
+  display: none;
 }
