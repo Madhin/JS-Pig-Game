@@ -234,12 +234,12 @@ main {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
-.btn__new {
+.btn__restart {
   top: 355px;
   left: 600px;
 }
 
-.btn__new2 {
+.btn__new {
   top: 750px;
   font-size: 33px;
   backdrop-filter: blur(30px);

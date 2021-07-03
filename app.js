@@ -1,8 +1,8 @@
 const score0 = document.querySelector("#score__0");
 const score1 = document.querySelector("#score__1");
 const dice = document.querySelector(".dice");
+const btnRestart = document.querySelector(".btn__restart");
 const btnNew = document.querySelector(".btn__new");
-const btnNew2 = document.querySelector(".btn__new2");
 const btnRoll = document.querySelector(".btn__roll");
 const btnHold1 = document.querySelector(".btn__hold1");
 const btnHold2 = document.querySelector(".btn__hold2");
@@ -21,7 +21,7 @@ score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add("hidden");
 piggy.classList.add("hidden");
-btnNew2.classList.add("hidden");
+btnNew.classList.add("hidden");
 
 let currentScore = 0;
 let activePlayer = 0;
@@ -45,6 +45,7 @@ btnRoll.addEventListener("click", () => {
   }
 });
 
+//hold buttons function
 btnHold1.addEventListener("click", () => {
   score0.textContent = currentScore;
   console.log(score0.textContent);
@@ -56,7 +57,7 @@ btnHold1.addEventListener("click", () => {
     piggy.classList.remove("hidden");
     piggy__h1.style.display = "block";
     piggy__winner1.style.display = "block";
-    btnNew2.classList.remove("hidden");
+    btnNew.classList.remove("hidden");
   } else {
     scores[0] += currentScore;
     activePlayer = 1;
@@ -77,7 +78,7 @@ btnHold2.addEventListener("click", () => {
     btns.disabled = true;
     piggy.classList.remove("hidden");
     piggy__h1.style.display = "block";
-    btnNew2.classList.remove("hidden");
+    btnNew.classList.remove("hidden");
     piggy__winner2.style.display = "block";
   } else {
     scores[1] += currentScore;
@@ -88,3 +89,31 @@ btnHold2.addEventListener("click", () => {
     player2.classList.remove("player__active");
   }
 });
+
+//restart function
+btnRestart.addEventListener("click", () => {
+  reset();
+});
+
+btnNew.addEventListener("click", () => {
+  reset();
+});
+
+const reset = () => {
+  currentScore = 0;
+  activePlayer = 0;
+  score1.textContent = currentScore;
+  score0.textContent = currentScore;
+  player1.classList.add("player__active");
+  player2.classList.remove("player__active");
+  dice.classList.add("hidden");
+  piggy.classList.add("hidden");
+  btnNew.classList.add("hidden");
+  piggy__h1.style.display = "none";
+  piggy__winner1.style.display = "none";
+  piggy__winner2.style.display = "none";
+  player1.classList.remove("player__winner");
+  player2.classList.remove("player__winner");
+  document.getElementById(`current__0`).textContent = currentScore;
+  document.getElementById(`current__1`).textContent = currentScore;
+};

@@ -3,8 +3,8 @@
 var score0 = document.querySelector("#score__0");
 var score1 = document.querySelector("#score__1");
 var dice = document.querySelector(".dice");
+var btnRestart = document.querySelector(".btn__restart");
 var btnNew = document.querySelector(".btn__new");
-var btnNew2 = document.querySelector(".btn__new2");
 var btnRoll = document.querySelector(".btn__roll");
 var btnHold1 = document.querySelector(".btn__hold1");
 var btnHold2 = document.querySelector(".btn__hold2");
@@ -22,7 +22,7 @@ score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add("hidden");
 piggy.classList.add("hidden");
-btnNew2.classList.add("hidden");
+btnNew.classList.add("hidden");
 var currentScore = 0;
 var activePlayer = 0; //roll dice function
 
@@ -42,7 +42,8 @@ btnRoll.addEventListener("click", function () {
     player1.classList.toggle("player__active");
     player2.classList.toggle("player__active");
   }
-});
+}); //hold buttons function
+
 btnHold1.addEventListener("click", function () {
   score0.textContent = currentScore;
   console.log(score0.textContent);
@@ -55,7 +56,7 @@ btnHold1.addEventListener("click", function () {
     piggy.classList.remove("hidden");
     piggy__h1.style.display = "block";
     piggy__winner1.style.display = "block";
-    btnNew2.classList.remove("hidden");
+    btnNew.classList.remove("hidden");
   } else {
     scores[0] += currentScore;
     activePlayer = 1;
@@ -76,7 +77,7 @@ btnHold2.addEventListener("click", function () {
     btns.disabled = true;
     piggy.classList.remove("hidden");
     piggy__h1.style.display = "block";
-    btnNew2.classList.remove("hidden");
+    btnNew.classList.remove("hidden");
     piggy__winner2.style.display = "block";
   } else {
     scores[1] += currentScore;
@@ -86,4 +87,30 @@ btnHold2.addEventListener("click", function () {
     player1.classList.add("player__active");
     player2.classList.remove("player__active");
   }
+}); //restart function
+
+btnRestart.addEventListener("click", function () {
+  reset();
 });
+btnNew.addEventListener("click", function () {
+  reset();
+});
+
+var reset = function reset() {
+  currentScore = 0;
+  activePlayer = 0;
+  score1.textContent = currentScore;
+  score0.textContent = currentScore;
+  player1.classList.add("player__active");
+  player2.classList.remove("player__active");
+  dice.classList.add("hidden");
+  piggy.classList.add("hidden");
+  btnNew.classList.add("hidden");
+  piggy__h1.style.display = "none";
+  piggy__winner1.style.display = "none";
+  piggy__winner2.style.display = "none";
+  player1.classList.remove("player__winner");
+  player2.classList.remove("player__winner");
+  document.getElementById("current__0").textContent = currentScore;
+  document.getElementById("current__1").textContent = currentScore;
+};

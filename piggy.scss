@@ -36,7 +36,7 @@
   bottom: -12%;
   transform: rotateX(-10deg);
   transform-origin: center 120%;
-  
+
   animation-name: zoom;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -123,4 +123,3 @@ input:checked + div {
 input:checked + .piggy::after {
   animation-name: initial;
 }
-
