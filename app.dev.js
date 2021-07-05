@@ -45,8 +45,9 @@ btnRoll.addEventListener("click", function () {
 }); //hold buttons function
 
 btnHold1.addEventListener("click", function () {
-  score0.textContent = currentScore;
-  console.log(score0.textContent);
+  scores[0] += currentScore;
+  score0.textContent = scores[0];
+  currentScore = 0;
 
   if (score0.textContent >= 50) {
     player1.classList.add("player__winner");
@@ -67,8 +68,9 @@ btnHold1.addEventListener("click", function () {
   }
 });
 btnHold2.addEventListener("click", function () {
-  score1.textContent = currentScore;
-  console.log(score1.textContent);
+  scores[1] += currentScore;
+  score1.textContent = scores[1];
+  currentScore = 0;
 
   if (score1.textContent >= 50) {
     player1.classList.add("player__winner");
