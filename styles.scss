@@ -200,3 +200,163 @@ main {
   backdrop-filter: blur(10px);
   display: none;
 }
+
+@media screen and (max-width: 667px) {
+  main {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background-color: cadetblue;
+  }
+  .player__0 {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.75s;
+  }
+
+  .player__1 {
+    padding: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    transition: all 0.75s;
+  }
+
+  .player__name {
+    position: relative;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .current {
+    background-color: #c7365f;
+    opacity: 0.8;
+    border-radius: 9px;
+    color: #fff;
+    width: 30%;
+    height: 30%;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.75s;
+    margin: auto;
+  }
+
+  .current__label {
+    text-transform: uppercase;
+    color: #ddd;
+    font-size: 10px;
+  }
+
+  .dice {
+    position: absolute;
+    top: 27.6rem;
+    left: 26rem;
+    height: 6rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  }
+
+  .player__score {
+    font-weight: 300;
+    color: #c7365f;
+  }
+
+  .player__active {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .player__active .player__name {
+    font-weight: 700;
+  }
+  .player__active .player__score {
+    font-weight: 400;
+  }
+
+  .btn {
+    position: absolute;
+    color: #444;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.2s;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.7rem 2.5rem;
+    border-radius: 50rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  }
+
+  .btn__restart {
+    top: 29rem;
+    left: 41rem;
+  }
+  
+  .btn__new {
+    top: 600px;
+    font-size: 20px;
+    backdrop-filter: blur(30px);
+  }
+  
+  .btn__roll {
+    top: 29rem;
+    left: 2.5rem;
+  }
+  
+  .btn__hold1 {
+    top: 0.5rem;
+    left: 24rem;
+    font-size: 12px;
+  }
+  
+  .btn__hold2 {
+    bottom: 1rem;
+    left: 24rem;
+    font-size: 12px;
+  }
+  
+  .btn:active {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  }
+
+  .piggy {
+    position: absolute;
+    top: 270px;
+    width: 100px;
+    height: 100px;
+    backdrop-filter: blur(90px);
+  }
+  
+  .piggy__h1 {
+    position: absolute;
+    top: 520px;
+    font-size: 65px;
+    font-family: Acme, sans-serif;
+    color: white;
+    display: none;
+    backdrop-filter: blur(10px);
+  }
+  
+  .piggy__winner1,
+  .piggy__winner2 {
+    position: absolute;
+    top: 35px;
+    font-size: 65px;
+    font-family: Acme, sans-serif;
+    color: white;
+    backdrop-filter: blur(10px);
+    display: none;
+  }
+}
