@@ -100,7 +100,8 @@ btnNew.addEventListener("click", () => {
 });
 
 const reset = () => {
-  scores = [0, 0];
+  scores[0] = 0;
+  scores[1] = 0;
   currentScore = 0;
   activePlayer = 0;
   score1.textContent = currentScore;

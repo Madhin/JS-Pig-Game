@@ -1,7 +1,5 @@
 "use strict";
 
-function _readOnlyError(name) { throw new Error("\"" + name + "\" is read-only"); }
-
 var score0 = document.querySelector("#score__0");
 var score1 = document.querySelector("#score__1");
 var dice = document.querySelector(".dice");
@@ -99,7 +97,8 @@ btnNew.addEventListener("click", function () {
 });
 
 var reset = function reset() {
-  scores = (_readOnlyError("scores"), [0, 0]);
+  scores[0] = 0;
+  scores[1] = 0;
   currentScore = 0;
   activePlayer = 0;
   score1.textContent = currentScore;
