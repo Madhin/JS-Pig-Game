@@ -1,5 +1,7 @@
 "use strict";
 
+function _readOnlyError(name) { throw new Error("\"" + name + "\" is read-only"); }
+
 var score0 = document.querySelector("#score__0");
 var score1 = document.querySelector("#score__1");
 var dice = document.querySelector(".dice");
@@ -53,7 +55,6 @@ btnHold1.addEventListener("click", function () {
     player1.classList.add("player__winner");
     player2.classList.add("player__winner");
     player2.classList.remove("player__active");
-    btnRoll.disabled = true;
     piggy.classList.remove("hidden");
     piggy__h1.style.display = "block";
     piggy__winner1.style.display = "block";
@@ -76,7 +77,6 @@ btnHold2.addEventListener("click", function () {
     player1.classList.add("player__winner");
     player2.classList.add("player__winner");
     player1.classList.remove("player__active");
-    btns.disabled = true;
     piggy.classList.remove("hidden");
     piggy__h1.style.display = "block";
     btnNew.classList.remove("hidden");
@@ -99,6 +99,7 @@ btnNew.addEventListener("click", function () {
 });
 
 var reset = function reset() {
+  scores = (_readOnlyError("scores"), [0, 0]);
   currentScore = 0;
   activePlayer = 0;
   score1.textContent = currentScore;
