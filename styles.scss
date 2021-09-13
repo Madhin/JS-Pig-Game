@@ -17,8 +17,8 @@ body {
 /* LAYOUT */
 main {
   position: relative;
-  width: 800px;
-  height: 800px;
+  width: 300em;
+  height: 220em;
   background-color: rgba(255, 255, 255, 0.35);
   border-radius: 9px;
   display: flex;
@@ -122,8 +122,8 @@ main {
 }
 
 .btn__restart {
-  top: 355px;
-  left: 600px;
+  top: 39rem;
+  left: 85rem;
 }
 
 .btn__new {
@@ -133,7 +133,7 @@ main {
 }
 
 .btn__roll {
-  top: 37rem;
+  top: 39rem;
   left: 4rem;
 }
 
@@ -154,7 +154,7 @@ main {
 .dice {
   position: absolute;
   top: 36rem;
-  left: 36.6rem;
+  left: 49rem;
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
@@ -367,6 +367,79 @@ main {
   }
 }
 
+@media screen and (max-width: 500px) and (min-width: 401px){
+  
+  .btn {
+    height:3rem;
+    width:9rem;
+    font-size: 2.6em;
+  }
+  .btn__restart {
+    top: 39.5rem;
+    left: 32rem;
+  }
+
+  .btn__new {
+    top: 73rem;
+    font-size: 2rem;
+    backdrop-filter: blur(30px);
+    height:4rem;
+    width:20rem;
+  }
+
+  .btn__roll {
+    top: 39.5rem;
+    left: 1.1rem;
+  }
+
+  .btn__hold1 {
+    top: 3rem;
+    left: 18rem;
+  }
+
+  .btn__hold2 {
+    bottom: 1.2rem;
+    left: 18rem;
+  }
+
+  .dice {
+    position: absolute;
+    top: 38rem;
+    left: 18rem;
+    height: 7rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  }
+
+  .piggy {
+    position: absolute;
+    top: 35rem;
+    width: 30rem;
+    height: 30rem;
+    backdrop-filter: blur(90px);
+  }
+
+  .piggy__h1 {
+    position: absolute;
+    top: 82rem;
+    font-size: 7rem;
+  }
+
+  .piggy__winner1,
+  .piggy__winner2 {
+    position: absolute;
+    top: 15rem;
+    font-size: 7rem;
+    font-family: Acme, sans-serif;
+    color: white;
+    backdrop-filter: blur(10px);
+    display: none;
+  }
+
+  .player__winner {
+    background-color: #2f2f2f;
+  }
+}
+
 @media screen and (max-width: 800px) and (min-width: 401px){
   
   .btn__restart {
@@ -393,7 +466,7 @@ main {
   }
 
   .btn__hold2 {
-    bottom: 2rem;
+    bottom: 1rem;
     left: 34rem;
   }
 
@@ -435,7 +508,9 @@ main {
   }
 }
 
-@media screen and (min-width: 1050px) {
+
+
+@media screen and (min-width: 1024px) {
   .piggy {
     position: absolute;
     top: 30rem;
@@ -472,10 +547,12 @@ main {
   }
 
   .btn__hold1 {
-    top: 3rem; 
+    top: 2rem;
+    left: 48rem; 
   }
 
   .btn__hold2 {
-    bottom: 3rem;
+    bottom: 1rem;
+    left: 48rem;
   }
 }
