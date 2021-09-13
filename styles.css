@@ -317,9 +317,8 @@ main {
 @media screen and (max-width: 400px) {
   main {
     position: relative;
-    width: 600px;
-    height: 600px;
     background-color: rgba(255, 255, 255, 0.35);
+    height: 170em;
     border-radius: 9px;
     display: flex;
     flex-direction: column;
@@ -423,7 +422,7 @@ main {
   }
 
   .btn__new {
-    top: 45rem;
+    top: 48rem;
     font-size: 1rem;
     backdrop-filter: blur(30px);
     height: 3rem;
@@ -451,15 +450,15 @@ main {
 
   .piggy {
     position: absolute;
-    top: 270px;
-    width: 100px;
-    height: 100px;
+    top: 29rem;
+    width: 13rem;
+    height: 15rem;
     backdrop-filter: blur(90px);
   }
 
   .piggy__h1 {
     position: absolute;
-    top: 57.5rem;
+    top: 60rem;
     font-size: 6rem;
     font-family: Acme, sans-serif;
     color: white;
@@ -470,7 +469,7 @@ main {
   .piggy__winner1,
 .piggy__winner2 {
     position: absolute;
-    top: 8rem;
+    top: 5rem;
     font-size: 6rem;
     font-family: Acme, sans-serif;
     color: white;
@@ -483,6 +482,17 @@ main {
   }
 }
 @media screen and (max-width: 500px) and (min-width: 401px) {
+  main {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.35);
+    height: 215em;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background-color: cadetblue;
+  }
+
   .btn {
     height: 3rem;
     width: 9rem;
@@ -495,7 +505,7 @@ main {
   }
 
   .btn__new {
-    top: 73rem;
+    top: 55rem;
     font-size: 2rem;
     backdrop-filter: blur(30px);
     height: 4rem;
@@ -513,7 +523,6 @@ main {
   }
 
   .btn__hold2 {
-    bottom: 1.2rem;
     left: 18rem;
   }
 
@@ -527,22 +536,22 @@ main {
 
   .piggy {
     position: absolute;
-    top: 35rem;
-    width: 30rem;
-    height: 30rem;
+    top: 27rem;
+    width: 20rem;
+    height: 20rem;
     backdrop-filter: blur(90px);
   }
 
   .piggy__h1 {
     position: absolute;
-    top: 82rem;
+    top: 65rem;
     font-size: 7rem;
   }
 
   .piggy__winner1,
 .piggy__winner2 {
     position: absolute;
-    top: 15rem;
+    top: 2rem;
     font-size: 7rem;
     font-family: Acme, sans-serif;
     color: white;
@@ -554,7 +563,7 @@ main {
     background-color: #2f2f2f;
   }
 }
-@media screen and (max-width: 800px) and (min-width: 401px) {
+@media screen and (max-width: 800px) and (min-width: 501px) {
   .btn__restart {
     top: 39.5rem;
     left: 62rem;
@@ -623,15 +632,15 @@ main {
 @media screen and (min-width: 1024px) {
   .piggy {
     position: absolute;
-    top: 30rem;
-    width: 200px;
-    height: 200px;
+    top: 50rem;
+    width: 40rem;
+    height: 40rem;
     backdrop-filter: blur(90px);
   }
 
   .piggy__h1 {
     position: absolute;
-    top: 68.5rem;
+    top: 102rem;
     font-size: 8rem;
     font-family: Acme, sans-serif;
     color: white;
@@ -642,7 +651,7 @@ main {
   .piggy__winner1,
 .piggy__winner2 {
     position: absolute;
-    top: 2rem;
+    top: 35rem;
     font-size: 8rem;
     font-family: Acme, sans-serif;
     color: white;
@@ -651,8 +660,8 @@ main {
   }
 
   .btn__new {
-    top: 58rem;
-    font-size: 33px;
+    top: 95rem;
+    font-size: 3rem;
     backdrop-filter: blur(30px);
   }
 
